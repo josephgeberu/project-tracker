@@ -8,6 +8,9 @@
 h1, h2, h3{
   color: #000000be;
 }
+input:focus, textarea:focus{
+  padding: 14px;
+}
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -31,11 +34,25 @@ h1, h2, h3{
   align-items: center;
 
 }
-
-input[type="text"], input[type="date"], textarea {
-  color: #a1a1a1;
-  font-weight: 600;
-  font-size: 13px;
+.project-form input[name="titel"], textarea {
+  border: none;
+  border-bottom: 1px solid #06dac5;
+  padding-bottom: 8px;
+}
+.start {
+  font-size: 12px;
+  display: flex;
+  gap: 8px;
+  color: #000000c2;
+  padding-block: 19px;
+  align-items: center;
+}
+.start input[type="date"] {
+  color: #939393;
+  font-weight: normal;
+  border: none;
+  border-bottom: 1px solid #03dac5;
+  padding: 5px;
 }
 
 .project-item {
@@ -113,21 +130,16 @@ input[type="text"], input[type="date"], textarea {
   min-width: 250px;
 
 }
-button{
-  padding: 10px;
-  border: none;
-  border-bottom: 1px solid #03DAC5;
-}
+
 .project-form button {
-  color: #03dac5;
+  color: #fff;
   border-radius: 5px;
-  background-color: transparent;
+  background-color: #40e3d3;
   font-size: 18px;
   margin-top: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid #03dac5;
+  padding-block: 10px;
+  font-weight: 800;
 }
 
 

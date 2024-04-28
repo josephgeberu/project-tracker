@@ -15,7 +15,6 @@ const Main = () => {
 
   return (
     <div className="projects-container">
-      <div className="closing-soon"></div>
       <div className="onGoing">
         <Form insertData={updateAllProjects} />
         {allProjects
@@ -24,7 +23,7 @@ const Main = () => {
             <Project data={project} delete={deleteProject} key={project.id} />
           ))}
       </div>
-      <div className="take-note">
+      <div className="currentProject">
         <h3>Curent Projects</h3>
         {allProjects
           .filter((project) => !project.warning)

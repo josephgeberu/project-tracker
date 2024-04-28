@@ -55,22 +55,26 @@ const Form = ({ insertData }) => {
         required
         placeholder="Project titel ..."
       />
-      <input
-        type="date"
-        name="open"
-        value={formData.open}
-        onChange={updateForm}
-        placeholder="Open: "
-      />
-      <input
-        type="date"
-        name="close"
-        value={formData.close}
-        onChange={updateForm}
-      />
+      <div className="start">
+        <label>Start: </label>
+        <input
+          type="date"
+          name="open"
+          value={formData.open}
+          onChange={updateForm}
+          placeholder="Open: "
+        />
+        <label>End: </label>
+        <input
+          type="date"
+          name="close"
+          value={formData.close}
+          onChange={updateForm}
+        />
+      </div>
 
       <textarea
-        rows={5}
+        rows={3}
         name="desc"
         value={formData.desc}
         onChange={updateForm}
