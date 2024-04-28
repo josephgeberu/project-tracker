@@ -6,28 +6,23 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Project = (props) => {
-  const deleteProject = (event) => {
-    props.delete(props.data.id);
-  };
+  const deleteProject = () => props.delete(props.data.id);
+  const toggelComplete = () => props.complted(props.data.id);
 
   return (
     <div className="project-item">
       <div className="project-top-content">
         <h2>{props.data.titel}</h2>
         <div className="project-button">
-          <div className="projectAction">
-            <FontAwesomeIcon
-              icon={faTrash}
-              onClick={deleteProject}
-              values="kljl"
-            />
+          <div className="projectAction" onClick={deleteProject}>
+            <FontAwesomeIcon icon={faTrash} values="kljl" />
             <p>Delete</p>
           </div>
           <div className="projectAction">
             <FontAwesomeIcon icon={faFileEdit} />
             <p>Edite</p>
           </div>
-          <div className="projectAction">
+          <div className="projectAction" onClick={toggelComplete}>
             <FontAwesomeIcon icon={faCircleCheck} />
             <p>Check</p>
           </div>

@@ -8,6 +8,7 @@ const Form = ({ insertData }) => {
     close: "",
     desc: "",
     left: "",
+    completed: true,
     warning: false,
   });
 
@@ -41,6 +42,7 @@ const Form = ({ insertData }) => {
       close: "",
       desc: "",
       left: "",
+      completed: true,
       warning: false,
     });
     return insertData(formData);

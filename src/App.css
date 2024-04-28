@@ -7,6 +7,7 @@
 
 h1, h2, h3{
   color: #000000be;
+  min-width: 200px;
 }
 input:focus, textarea:focus{
   padding: 14px;
@@ -70,6 +71,7 @@ input:focus, textarea:focus{
   width: 450px;
   padding-inline: 7px 70px;
   justify-content: space-between;
+  cursor: pointer;
 }
 .project-button{
   display: flex;
@@ -106,13 +108,12 @@ input:focus, textarea:focus{
   border: none;
 }
 
-.projects-container{
+.projects-container {
   display: grid;
-  margin: 8px 96px;
+  margin: 8px;
   grid-template-columns: repeat(3, auto 1fr 1fr);
   justify-items: center;
-  gap:48px ;
-  
+  gap: 48px;
 }
 .projects-container li{
   list-style: none;
@@ -146,4 +147,8 @@ input:focus, textarea:focus{
 .warningColor{
   color: red;
   font-weight: bold;
+}
+.completedProjects{
+  display: flex;
+  flex-direction: column;
 }
