@@ -7,7 +7,8 @@ import {
 
 const Project = (props) => {
   const deleteProject = () => props.delete(props.data.id);
-  const toggelComplete = () => props.complted(props.data.id);
+  const toggelComplete = () => console.log("hi there");
+  // props.complted(props.data.id);
 
   return (
     <div className="project-item">
@@ -15,7 +16,7 @@ const Project = (props) => {
         <h2>{props.data.titel}</h2>
         <div className="project-button">
           <div className="projectAction" onClick={deleteProject}>
-            <FontAwesomeIcon icon={faTrash} values="kljl" />
+            <FontAwesomeIcon icon={faTrash} />
             <p>Delete</p>
           </div>
           <div className="projectAction">
@@ -40,7 +41,7 @@ const Project = (props) => {
         <div>
           <p className="boldeDate">Left </p>
           <p className={props.data.left < 15 && "warningColor"}>
-            {props.data.left}{" "}
+            {props.data.left} Days
           </p>
         </div>
       </div>

@@ -84,7 +84,7 @@ const Form = ({ insertData }) => {
         placeholder="Project Description ..."
       />
       <button>
-        <i className="fa-regular fa-square-plus"></i>Add Project
+        <i className="fa-regular fa-square-plus"></i> +
       </button>
     </form>
   );

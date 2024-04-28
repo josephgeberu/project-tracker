@@ -23,11 +23,13 @@ const Main = () => {
 
   return (
     <div className="projects-container">
-      {allProjects
-        .filter((allProjects) => allProjects.completed)
-        .map((complete) => (
-          <Completed data={complete} key={complete.id} />
-        ))}
+      <ul>
+        {allProjects
+          .filter((allProjects) => allProjects.completed)
+          .map((complete) => (
+            <Completed data={complete} key={complete.id} />
+          ))}
+      </ul>
 
       <div className="onGoing">
         <Form insertData={updateAllProjects} />
