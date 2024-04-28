@@ -115,12 +115,12 @@ input:focus, textarea:focus{
   justify-items: center;
   gap: 48px;
 }
-.projects-container ul {
+.projects-container aside {
   box-shadow: 1px 1px 1px 2px #aadfda;
   padding: 20px;
   list-style: none;
 }
-.projects-container ul li {
+.projects-container aside li {
   color: #767676;
   border-bottom: 1px solid #40e3d3;
   padding-block: 11px;
