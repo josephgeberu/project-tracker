@@ -7,7 +7,7 @@ import {
 
 const Project = (props) => {
   const deleteProject = () => props.delete(props.data.id);
-  const toggelComplete = () => console.log("hi there");
+  const toggelComplete = () => props.complted(props.data.id);
   // props.complted(props.data.id);
 
   return (
@@ -23,8 +23,8 @@ const Project = (props) => {
             <FontAwesomeIcon icon={faFileEdit} />
             <p>Edite</p>
           </div>
-          <div className="projectAction" onClick={toggelComplete}>
-            <FontAwesomeIcon icon={faCircleCheck} />
+          <div className="projectAction">
+            <FontAwesomeIcon icon={faCircleCheck} onClick={toggelComplete} />
             <p>Check</p>
           </div>
         </div>
