@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3{
+  color: #000000be;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 10px;/*padding from top and bootom only*/
+  padding: 48px 96px;
+}
+.small-titel{
+  
+  font-size: 16px;
+  
+}
+.big-titel{
+  color:#03DAC5;
+  font-size: 20px;
+
+}
+.top-icons-container{
+  display:flex;
+  gap: 20px;
+  align-items: center;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="text"], input[type="date"], textarea {
+  color: #a1a1a1;
+  font-weight: 600;
+  font-size: 13px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.project-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-left: 6px solid #03DAC5;
+  padding: 20px;
+  margin-block: 21px;
+  border-block: 1px solid #03dac5;
+  border-right: 1px solid #03dac5;
+}
+.project-top-content {
+  display: flex;
+  text-transform: capitalize;
+  width: 450px;
+  padding-inline: 7px 70px;
+  justify-content: space-between;
+}
+.project-button{
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+}
+.svg-inline--fa {
+  color: #03dac5;
+  padding-inline: 12px;
+  font-size: 18px;
+}
+.svg-inline--fa + p {
+  font-size: 11px;
+  color: #484848;
+  text-align: center;
+}
+.dates {
+  display: flex;
+  justify-content:flex-start;
+  color: #00000079;
+}
+
+.dates > div {
+  border-right: 2px solid #03DAC5;
+  padding-inline: 10px;
+  font-size: 12px;
+
+}
+.boldeDate {
+  color: #000000d4;
+  font-size: 13px;
+}
+.dates > div:last-child{
+  border: none;
+}
+
+.projects-container{
+  display: grid;
+  margin: 8px 96px;
+  grid-template-columns: repeat(3, auto 1fr 1fr);
+  justify-items: center;
+  gap:48px ;
+  
+}
+.projects-container li{
+  list-style: none;
+
+}
+.completed{
+
+  text-align: left;
+
+}
+.project-form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 250px;
+
+}
+button{
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #03DAC5;
+}
+.project-form button {
+  color: #03dac5;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 18px;
+  margin-top: 16px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border: 1px solid #03dac5;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.warningColor{
+  color: red;
+  font-weight: bold;
 }
