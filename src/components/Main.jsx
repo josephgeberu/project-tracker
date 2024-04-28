@@ -13,21 +13,21 @@ const Main = () => {
       allProjects.filter((allProjects) => allProjects.id !== projectId)
     );
 
-  const projectCompleted = (projectId) => console.log("i am clicked");
-  // setAllProjects(() =>
-  //   allProjects.map((pro) => {
-  //     pro.completed = pro.id === projectId && !pro.completed;
-  //     console.log(pro.completed);
-  //   })
-  // );
+  const projectCompleted = (projectId) =>
+    setAllProjects((prev) => ({
+      ...prev,
+      [prev.completed]: prev.id === projectId && !prev.completed,
+    }));
 
   return (
     <div className="projects-container">
-      {allProjects
-        .filter((allProjects) => allProjects.completed)
-        .map((complete) => (
-          <Completed data={complete} key={complete.id} />
-        ))}
+      <aside className="complitedList">
+        {allProjects
+          .filter((allProjects) => allProjects.completed)
+          .map((complete) => (
+            <Completed data={complete} key={complete.id} />
+          ))}
+      </aside>
 
       <div className="onGoing">
         <Form insertData={updateAllProjects} />
